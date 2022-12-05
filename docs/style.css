@@ -1,0 +1,201 @@
+/*variable colors that goes into the background of the form, the borders and hr*/
+:root{
+    --color1:#EFF1DB;
+    --color2:#D3B5E5;
+    --color3:#BBE7FE;
+}
+
+html, body {
+    overflow: auto;
+}
+
+body {
+    font-size:1.2rem;
+    min-width:280px;
+    /* picture for a device-width between 0 and 640px in landscape-mode */
+    background-image: url(images/roseclouds_640.jpg);
+    background-repeat:  no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* change  */
+    background-attachment: fixed;
+    /* to  */
+    /* position: fixed; */
+    /* if your style is not added to body */
+  }
+  @media (orientation: portrait),/*mobile deviced*/
+         (-webkit-min-device-pixel-ratio: 1.5),/*pixel-ratio for ios safari or dpi for android browsers*/
+         (min-resolution: 144dpi) {
+    
+    body {
+      background-image: url(images/roseclouds_1280.jpg);/*bigger picture to fit the proportion*/
+    }
+  }
+  
+  @media (min-width: 640px) and (orientation: landscape) {/*wider than 640px landscape resolutions*/
+    body {
+      background-image: url(images/roseclouds_1280.jpg);
+    }
+  }
+  @media (min-width: 640px) and (orientation: portrait) {/*wider than 640px portrait resolutions*/
+    body {
+      background-image: url(images/roseclouds_2560.jpg);
+    }
+  }
+  @media (min-width: 640px) and (-webkit-min-device-pixel-ratio: 1.5),
+         (min-width: 640px) and (min-resolution: 144dpi) {/*wider than 640px ios or android resolutions*/
+    
+    body {
+      background-image: url(images/roseclouds_2560.jpg);
+    }
+  }
+  @media (min-width: 1280px)  and (orientation: landscape) {/*wider than 1280px landscape resolutions*/
+    body {
+      background-image: url(images/roseclouds_2560.jpg);
+    }
+ }
+
+
+ /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top:-20px;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--color1);
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family:Arial;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.container-div{
+    background-color:var(--color3);
+    margin:auto;
+    width:35vw;
+    padding:25px;
+    border-radius:5px;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, sans-serif;
+}
+
+.title{
+    text-align: center;
+}
+
+h1{
+    margin-top:1px;
+    margin-bottom:5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*names, email and password input*/
+.first-section input{
+    width:98.9%;
+    border:1px solid #D3B5E5;
+}
+
+.first-section{
+    margin-top:10px;
+}
+
+/*a little margin to those labels to give a natural aspect to the content*/
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/*division between sections*/
+hr{
+    height:4px;
+    background-color:var(--color1);
+    border:none;
+    border-radius:2px;
+}
+
+/*a little margin between sections minus the title*/
+section:not(.title){
+    margin:30px 0;
+}
+
+/*used to break the lines of the inputs*/
+input{
+    display:block;
+}
+
+/*used to align the items of the second section*/
+.inline{
+    display:inline-block;
+}
+
+/*limited the resize feature of the biography text area*/
+#bio{
+    display:block;
+    min-height:10vh;
+    min-width:98.9%;
+    max-width:98.9%;
+    max-height:80px;
+    border:1px solid #D3B5E5;
+}
+
+/*default color of the anchor element in the second section*/
+a{
+    color:rgb(79, 76, 80);
+}
+
+/*new color of the anchor element when clicked, short duration*/
+a:active{
+    color:var(--color3);
+}
+
+/*new color of the anchor element when clicked*/
+a:focus{
+    color:#D3B5E5;
+}
+
+/*styled submit button at the bottom of the form*/
+input[type=submit]{
+    margin:auto;
+    width:100px;
+    height:50px;
+    font-size:1.2rem;
+    font-family: 'Droid Sans Mono', sans-serif;
+    background-color:var(--color1);
+    text-align: center;
+    text-decoration: none;
+    border:1px solid #D3B5E5;
+    border-top-right-radius:50px;/*right curve*/
+    border-top-left-radius:50px;/*left curve*/
+    padding-top:12px;
+}
+
+/*border for the hird section elements*/
+.third-section input, select{
+    border:1px solid #D3B5E5;
+}
+
+/*background color and size for the profile picture input*/
+input[type=file]{
+    background-color:#fff;
+    width:98.9%;
+}
