@@ -1,7 +1,7 @@
 # RegistrationForm
 Description:
 
-    An easy-going registration form with light colors. It asks a name, email, password, type of account, an agreement to the terms and conditions, it enables upload of a profile picture, age and a text area for a biography.
+    - An easy-going registration form with light colors. It asks a name, email, password, type of account, an agreement to the terms and conditions, it enables upload of a profile picture, age and a text area for a biography.
 
 Knowledges applied:
 
