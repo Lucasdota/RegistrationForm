@@ -134,8 +134,12 @@ hr{
 }
 
 /*a little margin between sections minus the title*/
-section:not(.title){
+fieldset:not(.title){
     margin:30px 0;
+}
+
+fieldset{
+  border:none;
 }
 
 /*used to break the lines of the inputs*/

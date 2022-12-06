@@ -12,14 +12,14 @@
 <body>
     <div class="container-div">
         <form method="post" action="https://desiredurl.com">
-            <section class="title"><!--title section with a hidden div just to display a tooltip when hovering over-->
+            <fieldset class="title"><!--title section with a hidden div just to display a tooltip when hovering over-->
                 <h1>Registration Form</h1>
                 <div class="tooltip">
                 <p>Please fill out this form with the required information</p>
                 <span class="tooltiptext">*required</span><!--text displayed in the tooltip-->
                 </div>
-            </section>
-            <section class="first-section"><!--section for name, email and password-->
+            </fieldset>
+            <fieldset class="first-section"><!--section for name, email and password-->
                 <label for="first-name">
                     Enter Your First Name:
                     <input id="first-name" type="text" name="first-name" maxlength="20">
@@ -36,9 +36,9 @@
                     Create a New Password:*
                     <input id="password" type="password" name="password" required maxlength="20">
                 </label>
-            </section>
+            </fieldset>
             <hr>
-            <section class="second-section"><!--section for type of account and terms-->
+            <fieldset class="second-section"><!--section for type of account and terms-->
                 <label for="personal-account">
                     <input id="personal-account" type="radio" name="account-type" value="personal-account" class="inline"> Personal Account
                 </label>
@@ -48,9 +48,9 @@
                 <label for="terms">
                     <input id="terms" type="checkbox" required class="inline"> I accept the <a target="_blank" href="https://www.linkedin.com/in/lucas-dota-trombini/">terms and conditions.</a>
                 </label>
-            </section>
+            </fieldset>
             <hr>
-            <section class="third-section"><!--section for profile picture, age, referrer and biography-->
+            <fieldset class="third-section"><!--section for profile picture, age, referrer and biography-->
                 <label for="picture">
                 Upload a profile picture:*
                 <input type="file" id="picture" name="picture" required>
@@ -61,7 +61,7 @@
                 </label>
                 <label for="referrer">
                 How did you hear about us?
-                <select id="referrer" name="referrer" size="2" multiple="multiple">
+                <select id="referrer" name="referrer">
                     <option value selected disabled>(Select one)</option><!--this option comes selected and it is disabled after switching to another option-->
                     <option value="1" name="Blog">Blog</option>
                     <option value="2" name="Youtube">Youtube</option>
@@ -74,7 +74,7 @@
                     Provide a bio:
                     <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
                 </label>           
-            </section>
+            </fieldset>
             <input type="submit" value="Submit">
         </form>
     </div>   
